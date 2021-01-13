@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Form = ({ inputValue, setInputValue, handleSubmit }) => {
   return (
@@ -14,6 +15,12 @@ const Form = ({ inputValue, setInputValue, handleSubmit }) => {
       </button>
     </div>
   );
+};
+
+Form.propTypes = {
+  inputValue: PropTypes.string,
+  setInputValue: PropTypes.func,
+  handleSubmit: PropTypes.func,
 };
 
 export default Form;

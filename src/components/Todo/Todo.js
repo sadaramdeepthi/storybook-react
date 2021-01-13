@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Todo = ({ todo, index, handleDeleteTodo }) => {
   return (
@@ -11,6 +12,15 @@ const Todo = ({ todo, index, handleDeleteTodo }) => {
       </span>
     </div>
   );
+};
+
+Todo.propTypes = {
+  todo: PropTypes.object({
+    id: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+  }),
+  index: PropTypes.number,
+  handleDeleteTodo: PropTypes.func,
 };
 
 export default Todo;

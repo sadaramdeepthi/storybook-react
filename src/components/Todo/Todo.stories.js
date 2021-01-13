@@ -1,11 +1,22 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import Todo from "./Todo";
 
-const props = {
-  todo: { id: "1", text: "Visit Doctor" },
-  index: 0,
-  handleDeleteTodo: () => {},
+export default {
+  title: "Todo",
+  component: "Todo",
+  argTypes: {
+    todo: { id: "1", text: "Visit Doctor" },
+    index: 0,
+    handleDeleteTodo: () => {},
+  },
 };
 
-storiesOf("Todo", module).add("default", () => <Todo {...props} />);
+const Template = (args) => <Todo {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  todo: { id: "1", text: "Visit Doctor" },
+  index: 0,
+  handleDeleteTodo: action("Todo is deleted"),
+};

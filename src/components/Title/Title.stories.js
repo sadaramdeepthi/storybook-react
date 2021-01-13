@@ -1,15 +1,17 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import Title from "./Title";
 
-const defaultProps = {
-  myName: "",
+export default {
+  title: "Title",
+  component: "Title",
+  argTypes: {
+    myName: "",
+  },
 };
 
-const populatedProps = {
+const Template = (args) => <Title {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
   myName: "React",
 };
-
-storiesOf("Title", module)
-  .add("default", () => <Title {...defaultProps} />)
-  .add("populated", () => <Title {...populatedProps} />);

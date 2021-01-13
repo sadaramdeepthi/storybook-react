@@ -1,19 +1,22 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
 import Form from "./Form";
 
-const defaultProps = {
-  inputValue: "",
-  setInputValue: () => {},
-  handleSubmit: () => {},
+export default {
+  title: "Form",
+  component: "Form",
+  argTypes: {
+    inputValue: "",
+    setInputValue: () => {},
+    handleSubmit: () => {},
+  },
 };
 
-const populatedProps = {
+const Template = (args) => <Form {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
   inputValue: "learn storybook",
-  setInputValue: () => {},
-  handleSubmit: () => {},
+  setInputValue: action("Input value"),
+  handleSubmit: action("Submit button clicked"),
 };
-
-storiesOf("Form", module)
-  .add("default", () => <Form {...defaultProps} />)
-  .add("populated", () => <Form {...populatedProps} />);
