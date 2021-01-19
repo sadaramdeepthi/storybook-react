@@ -3,71 +3,49 @@
   text-align: center;
   background-color: #c6dbd7;
   height: 100%;
-  padding: 50px;
+  padding: 5px;
   color: #050404;
 }
 
 .todolist {
   margin: auto;
-  max-width: 425px;
+  max-width: 800px;
+}
+
+.todo {
+  margin-top: 15px;
 }
 
 .title {
   color: #050404;
 }
 
-.form {
+/***** Form Field ********/
+.form-field {
   align-items: center;
+  max-width: 500px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
-.input {
-  background-color: transparent;
-  border: 2px solid #050404;
-  color: #050404;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 22px;
-  font-family: inherit;
+/* ----Pagination-----*/
+.pagination {
+  margin-left: 290px;
+  margin-right: 200px;
 }
-
-.submit {
-  background-color: transparent;
-  border: 2px solid #050404;
-  color: #050404;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 22px;
-  margin-left: 8px;
-  font-family: inherit;
+.pagination > .active > a {
+  background-color: #47ccde;
+  border-color: #000000;
+  color: #fff;
+}
+.pagination > li > a {
+  border: 1px solid #000000;
+  padding: 5px 10px;
+  outline: none;
   cursor: pointer;
 }
 
-.submit:hover {
-  background-color: #050404;
-  border: 2px solid #050404;
-  color: #6f7574;
-  padding: 10px;
-}
-
-.todo {
-  text-align: left;
-  margin-top: 8px;
-  background-color: transparent;
-  border: 2px solid #050404;
-  color: #050404;
-  padding: 10px;
-  border-radius: 6px;
-  font-size: 22px;
-  font-family: inherit;
-}
-
-.todo-delete {
-  float: right;
-  padding: 0px 4px;
-  cursor: pointer;
-}
-
-.todo-delete:hover {
-  background-color: #0504041c;
-  border-radius: 6px;
+/****** Search Todo *******/
+.search-container {
+  margin-top: 10px;
 }
